@@ -19,10 +19,12 @@
   <!-- Custom CSS -->
   <link href="css/style.css" rel="stylesheet">
 
+  <!--JQuery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </head>
 
-<body class="background">
+<body class="parallax">
 
   <!-- Navigation  -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -33,15 +35,18 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item active">
+          <a class="nav-link" href="#about">About<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
           <a class="nav-link" href="#education">Education<span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item active">
           <a class="nav-link" href="#skills">Skills</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item active">
           <a class="nav-link" href="#experience">Experience</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item active">
           <a class="nav-link" href="#projects">Projects</a>
         </li>
       </ul>
@@ -49,14 +54,36 @@
   </nav>
 
   <!-- Header  -->
+  <container id="header">
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container text-center">
+        <img src="img/sun.jpg" class="img-fluid profile-photo" alt="ocean" height="75%" width="50%" class="profile-photo">
+        <h1 class="display-4 header-font"><u>Eric Chen</u></h1>
+      </div>
+    </div>
+  </container>
+
+  <!-- About -->
+  <container id="about">
+    <div class="container section-padding">
+      <div class="row background-teal">
+        <div class="col-12"><h1 class="text-center smaller-padding"> About </h1></div>
+      </div>
+      <div class="row background-white section-padding textsize2">
+        <div class="col-12">
+          About description
+        </div>
+      </div>
+    </div>
+  </container>
 
   <!--Education-->
   <section id="education">
-    <div class="container">
-      <div class="row">
-          <div class="col-12"><h1 class="text-center"> Education </h1></div>
+    <div class="container section-padding">
+      <div class="row background-teal">
+          <div class="col-12"><h1 class="text-center smaller-padding"> Education </h1></div>
       </div>
-      <div class="row">
+      <div class="row background-white section-padding textsize2">
         <div class="col-12">
           High School
         </div>
@@ -66,25 +93,31 @@
 
   <!--Skills  -->
   <section id="skills">
-    <div class="container">
-      <div class="row">
-        <div class="col-12"> <h1 class="text-center"> Skills </h1></div>
+    <div class="container section-padding">
+      <div class="row background-teal">
+        <div class="col-12"> <h1 class="text-center smaller-padding"> Skills </h1></div>
       </div>
-      <div class="row">
+      <div class="row background-white section-padding">
         <div class="col-4 text-center">
-          <i class="fab fa-accessible-icon fa-9x"></i>
+          <a class="skills icon" data-toggle="popover" title="Skill 1" data-placement="bottom" data-content="Skill 1 Description" data-trigger="hover">
+            <i class="fab fa-accessible-icon fa-9x skills-color skills-color:hover mobile-only"></i>
+          </a>
           <br>
-          Skill 1
+          <span class="body-textsize text-center">Skill 1</span>
         </div>
         <div class="col-4 text-center">
-          <i class="fas fa-battery-empty fa-9x"></i>
+          <a class="skills-icon" data-toggle="popover" title="Skill 2" data-placement="bottom" data-content="Skill 2 Description" data-trigger="hover">
+          <i class="fab fa-java fa-9x skills-color skills-color:hover mobile-only"></i>
+          </a>
           <br>
-          Skill 2
+          <span class="body-textsize text-center">Skill 2</span>
         </div>
         <div class="col-4 text-center">
-          <i class="fab fa-html5 fa-9x"></i>
+          <a class="skills-icon" data-toggle="popover" title="Skill 3" data-placement="bottom" data-content="Skill 3 Description" data-trigger="hover">
+          <i class="fab fa-html5 fa-9x skills-color skills-color:hover mobile-only"></i>
+          </a>
           <br>
-          Skill 3
+          <span class="body-textsize text-center">Skill 3</span>
         </div>
       </div>
     </div>
@@ -92,12 +125,12 @@
 
   <!--Experience -->
   <section id="experience">
-    <div class="container">
-      <div class="row">
-          <div class="col-12"> <h1 class="text-center"> Experience </h1></div>
+    <div class="container section-padding">
+      <div class="row background-teal">
+          <div class="col-12"> <h1 class="text-center smaller-padding"> Experience </h1></div>
       </div>
-      <div class="row">
-          <div class="col-12"> 
+      <div class="row background-white section-padding">
+          <div class="col-12 textsize2"> 
             <ul>
               <li> Experience 1 </li>
               <li> Experience 2 </li>
@@ -110,21 +143,53 @@
 
   <!--Projects -->
   <section id="projects">
-    <div class="container">
-      <div class="row">
-          <div class="col-12"> <h1 class="text-center"> Projects </h1></div>
+    <div class="container section-padding">
+      <div class="row background-teal">
+          <div class="col-12"> <h1 class="text-center smaller-padding"> Projects </h1></div>
       </div>
-      <div class="row">
-          <div class="col-12"> 
-            <ul>
-              <li> Project 1 </li>
-              <li> Project 2 </li>
-              <li> Project 3 </li>
-           </ul> 
+      <div class="row background-white section-padding text-center">
+          <div class="col-4 textsize2 smaller-padding  hpadding"> 
+            <img src="img/sun.jpg" height="75%" width="50%">
+            <br>
+            Project 1
+          </div>
+          <div class="col-4 textsize2 smaller-padding hpadding"> 
+            <img src="img/sun.jpg" height="75%" width="50%">
+            <br>
+            Project 2
+          </div>
+          <div class="col-4 textsize2 smaller-padding hpadding"> 
+            <img src="img/sun.jpg" height="75%" width="50%">
+            <br>
+            Project 3
           </div>
       </div>
     </div>
   </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row background-white smaller-padding">
+          <div class="col-6 smaller-padding">
+            Eric Chen
+          </div>
+          <div class="col-3 smaller-padding">
+            Nonexistent Social Media
+          </div>
+          <div class="col-3 smaller-padding">
+            Nonexistent Social Media
+          </div>
+      </div>
+  </div>
+  </footer>
+
+  <!-- Popover JavaScript-->
+  <script>
+    $(document).ready(function() {
+      $('[data-toggle="popover"]').popover();
+    });
+  </script> 
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.slim.min.js"></script>
